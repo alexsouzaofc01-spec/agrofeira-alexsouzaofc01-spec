@@ -4,7 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript na AgroFeira</title>
-  <link rel="stylesheet" href="css/tokens.css">
+  <!-- Estilo para deixar a página colorida e organizada -->
+  <style>
+    body {
+      background-color: #f4f8f4; /* Fundo verde/bege bem clarinho */
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2e7d32; /* Cabeçalho verde escuro */
+      color: white;
+      padding: 15px 20px;
+    }
+    header h1 { margin: 0; }
+    header nav ul { list-style: none; padding: 0; margin-top: 10px; }
+    header nav ul li { display: inline; margin-right: 15px; }
+    header nav ul li a { color: #a5d6a7; text-decoration: none; font-weight: bold; }
+    
+    main {
+      background-color: #ffffff; /* Fundo do texto branco para destacar */
+      max-width: 800px;
+      margin: 30px auto; /* Centraliza a caixa e dá espaço do topo */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombrinha na caixa */
+    }
+    h2 {
+      color: #2e7d32;
+      border-bottom: 2px solid #a5d6a7;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+    .link-destaque {
+      background-color: #e8f5e9;
+      padding: 15px;
+      border-left: 5px solid #2e7d32;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .erro-box {
+      background-color: #fff3f3;
+      color: #c62828;
+      padding: 15px;
+      border: 1px solid #ffcdd2;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+    footer {
+      background-color: #2e7d32; /* Rodapé verde */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a { color: #a5d6a7; font-weight: bold; text-decoration: none; }
+  </style>
 </head>
 <body>
   <header>
@@ -23,20 +79,17 @@
   <main>
     <h2>JavaScript na AgroFeira</h2>
     
-    <p><strong>Nome:</strong> Alex de S. Silva - <strong>Matrícula:</strong> 2024003048</p>
-    <p><strong>Repositório:</strong> <a href="https://github.com/alexsouzaofc01-spec/agrofeira-alexsouzaofc01-spec">https://github.com/alexsouzaofc01-spec/agrofeira-alexsouzaofc01-spec</a></p>
-    <p><strong>Site:</strong> <a href="https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html">https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html</a></p>
+    <div class="link-destaque">
+      <strong>Nome:</strong> Alex de S. Silva - <strong>Matrícula:</strong> 2024003048<br><br>
+      <strong>Repositório:</strong> <a href="https://github.com/alexsouzaofc01-spec/agrofeira-alexsouzaofc01-spec">https://github.com/alexsouzaofc01-spec/agrofeira-alexsouzaofc01-spec</a><br>
+      <strong>Site:</strong> <a href="https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html">https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html</a>
+    </div>
 
     <p>Aqui eu testei as três formas de colocar o JavaScript na página: a externa (usando o src), a interna (entre as tags script) e a em linha (no botão com onclick).</p>
 
-    <!-- Passo 3: Forma 1 (Externa) -->
     <script src="js/aula8.js"></script>
-
-    <!-- Passo 4: Forma 2 (Interna) -->
     <script>console.log('Forma 2: interna, entre as tags script');</script>
-
-    <!-- Passo 5: Forma 3 (Em linha) -->
-    <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')">Forma 3</button>
+    <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')" style="background-color: #2e7d32; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 16px;">Forma 3 (Clique Aqui)</button>
 
     <h2>Meus projetos no CodeSandbox</h2>
     <ul>
@@ -45,11 +98,13 @@
     </ul>
 
     <h2>Mensagens de erro</h2>
-    <ul>
-      <li><strong>Passo 6:</strong> Uncaught ReferenceError: naoExiste is not defined at aula8.js:2</li>
-      <li><strong>Passo 10:</strong> Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment &lt;&gt;...&lt;/&gt;?</li>
-      <li><strong>Passo 14:</strong> Warning: Each child in a list should have a unique "key" prop.</li>
-    </ul>
+    <div class="erro-box">
+      <ul>
+        <li><strong>Passo 6:</strong> Uncaught ReferenceError: naoExiste is not defined at aula8.js:2</li>
+        <li><strong>Passo 10:</strong> Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment &lt;&gt;...&lt;/&gt;?</li>
+        <li><strong>Passo 14:</strong> Warning: Each child in a list should have a unique "key" prop.</li>
+      </ul>
+    </div>
 
     <h2>O que eu aprendi</h2>
     <p>Se eu tivesse que fazer um programa grande, com umas 200 linhas, eu ia preferir usar a Forma 1 (externa). Se eu usasse a forma em linha ou interna, eu teria que copiar e colar o código em todas as páginas do site, e se precisasse mudar algo ia ser muito chato. É tipo o CSS, é melhor ter um arquivo separado e só linkar no HTML. Fica muito mais fácil de organizar.</p>
@@ -66,7 +121,8 @@
   </main>
 
   <footer>
-    <p>AgroFeira - projeto acadêmico</p>
+    <p>© 2026 AgroFeira. Todos os direitos reservados.</p>
+    <p>Site do aluno: <a href="https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html">alexsouzaofc01-spec.github.io</a></p>
   </footer>
 </body>
 </html>
