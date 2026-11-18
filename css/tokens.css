@@ -1,0 +1,9 @@
+:root {
+  --cor-primaria: #2e7d32;
+  --cor-secundaria: #a5d6a7;
+  --cor-texto: #1b1b1b;
+  --cor-fundo: #f9fbe7;
+}
+body { font-family: sans-serif; background: var(--cor-fundo); color: var(--cor-texto); margin: 0; padding: 20px; }
+header { background: var(--cor-primaria); color: white; padding: 10px; }
+header a { color: white; margin-right: 15px; text-decoration: none; }
