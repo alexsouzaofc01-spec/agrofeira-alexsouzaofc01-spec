@@ -4,92 +4,98 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript na AgroFeira</title>
-  <!-- Estilo para deixar a página colorida e organizada -->
+  
   <style>
+    /* Estilo bem simples e direto */
     body {
-      background-color: #f4f8f4; /* Fundo verde/bege bem clarinho */
+      background-color: #f4f8f4; /* Fundo clarinho */
       font-family: Arial, sans-serif;
       color: #333;
       margin: 0;
       padding: 0;
     }
     header {
-      background-color: #2e7d32; /* Cabeçalho verde escuro */
+      background-color: #2e7d32;
       color: white;
-      padding: 15px 20px;
+      padding: 15px;
     }
-    header h1 { margin: 0; }
-    header nav ul { list-style: none; padding: 0; margin-top: 10px; }
-    header nav ul li { display: inline; margin-right: 15px; }
-    header nav ul li a { color: #a5d6a7; text-decoration: none; font-weight: bold; }
-    
+    header ul {
+      list-style: none;
+      padding: 0;
+    }
+    header li {
+      display: inline;
+      margin-right: 15px;
+    }
+    header a {
+      color: #a5d6a7;
+      text-decoration: none;
+    }
     main {
-      background-color: #ffffff; /* Fundo do texto branco para destacar */
+      background-color: white;
       max-width: 800px;
-      margin: 30px auto; /* Centraliza a caixa e dá espaço do topo */
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombrinha na caixa */
+      margin: 20px auto; /* Centraliza a caixa principal */
+      padding: 20px;
+      border-radius: 8px; /* Borda arredondada */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombrinha */
     }
     h2 {
       color: #2e7d32;
       border-bottom: 2px solid #a5d6a7;
-      padding-bottom: 5px;
-      margin-top: 30px;
     }
-    .link-destaque {
+    .dados-aluno {
       background-color: #e8f5e9;
-      padding: 15px;
-      border-left: 5px solid #2e7d32;
-      margin-bottom: 20px;
-      font-size: 14px;
+      padding: 10px;
+      border-left: 4px solid #2e7d32;
     }
-    .erro-box {
+    .lista-erros {
       background-color: #fff3f3;
       color: #c62828;
-      padding: 15px;
-      border: 1px solid #ffcdd2;
+      padding: 10px;
       border-radius: 5px;
       font-family: monospace;
     }
     footer {
-      background-color: #2e7d32; /* Rodapé verde */
+      background-color: #2e7d32;
       color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 15px;
+      margin-top: 20px;
     }
-    footer a { color: #a5d6a7; font-weight: bold; text-decoration: none; }
+    footer a {
+      color: #a5d6a7;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>AgroFeira</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="safra.html">Safra</a></li>
-        <li><a href="cadastro-produtor.html">Cadastro</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-      </ul>
-    </nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="safra.html">Safra</a></li>
+      <li><a href="cadastro-produtor.html">Cadastro</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+    </ul>
   </header>
 
   <main>
     <h2>JavaScript na AgroFeira</h2>
     
-    <div class="link-destaque">
-      <strong>Nome:</strong> Alex de S. Silva - <strong>Matrícula:</strong> 2024003048<br><br>
-      <strong>Repositório:</strong> <a href="https://github.com/alexsouzaofc01-spec/agrofeira-alexsouzaofc01-spec">https://github.com/alexsouzaofc01-spec/agrofeira-alexsouzaofc01-spec</a><br>
-      <strong>Site:</strong> <a href="https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html">https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html</a>
+    <!-- Dados do Aluno -->
+    <div class="dados-aluno">
+      <p><strong>Nome:</strong> Alex de S. Silva - <strong>Matrícula:</strong> 2024003048</p>
+      <p><strong>Repositório:</strong> <a href="https://github.com/alexsouzaofc01-spec/agrofeira-alexsouzaofc01-spec">https://github.com/alexsouzaofc01-spec/agrofeira-alexsouzaofc01-spec</a></p>
+      <p><strong>Site:</strong> <a href="https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html">https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html</a></p>
     </div>
 
     <p>Aqui eu testei as três formas de colocar o JavaScript na página: a externa (usando o src), a interna (entre as tags script) e a em linha (no botão com onclick).</p>
 
+    <!-- Scripts -->
     <script src="js/aula8.js"></script>
     <script>console.log('Forma 2: interna, entre as tags script');</script>
-    <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')" style="background-color: #2e7d32; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 16px;">Forma 3 (Clique Aqui)</button>
+
+    <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')" style="background-color: #2e7d32; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Forma 3</button>
 
     <h2>Meus projetos no CodeSandbox</h2>
     <ul>
@@ -98,7 +104,7 @@
     </ul>
 
     <h2>Mensagens de erro</h2>
-    <div class="erro-box">
+    <div class="lista-erros">
       <ul>
         <li><strong>Passo 6:</strong> Uncaught ReferenceError: naoExiste is not defined at aula8.js:2</li>
         <li><strong>Passo 10:</strong> Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment &lt;&gt;...&lt;/&gt;?</li>
