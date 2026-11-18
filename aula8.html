@@ -22,7 +22,12 @@
 
   <main>
     <h2>JavaScript na AgroFeira</h2>
-    <p>Nesta atividade, coloquei em prática as três formas de usar JavaScript numa página: a externa (ligando um arquivo .js pelo src), a interna (escrevendo o código entre as tags script) e a em linha (colocando o código direto no atributo onclick de um botão).</p>
+    
+    <p><strong>Nome:</strong> Alex de S. Silva - <strong>Matrícula:</strong> 2024003048</p>
+    <p><strong>Repositório:</strong> <a href="https://github.com/alexsouzaofc01-spec/agrofeira-alexsouzaofc01-spec">https://github.com/alexsouzaofc01-spec/agrofeira-alexsouzaofc01-spec</a></p>
+    <p><strong>Site:</strong> <a href="https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html">https://alexsouzaofc01-spec.github.io/agrofeira-alexsouzaofc01-spec/aula8.html</a></p>
+
+    <p>Aqui eu testei as três formas de colocar o JavaScript na página: a externa (usando o src), a interna (entre as tags script) e a em linha (no botão com onclick).</p>
 
     <!-- Passo 3: Forma 1 (Externa) -->
     <script src="js/aula8.js"></script>
@@ -33,27 +38,35 @@
     <!-- Passo 5: Forma 3 (Em linha) -->
     <button type="button" onclick="alert('Forma 3: em linha, dentro da tag')">Forma 3</button>
 
-    <h2>Mensagens de erro registradas</h2>
-    <p>Durante os testes, encontrei alguns erros no Console e anotei as mensagens para consulta:</p>
+    <h2>Meus projetos no CodeSandbox</h2>
     <ul>
-      <li><strong>Passo 6:</strong> Uncaught ReferenceError: naoExiste is not defined (aula8.js:2)</li>
-      <li><strong>Passo 10:</strong> Adjacent JSX elements must be wrapped in an enclosing tag.</li>
+      <li><a href="https://codesandbox.io/p/sandbox/v5qlp8" target="_blank">Tabuleiro (Parte B)</a></li>
+      <li><a href="https://codesandbox.io/p/sandbox/xvhsfh" target="_blank">AgroFeira em componentes (Parte C)</a></li>
+    </ul>
+
+    <h2>Mensagens de erro</h2>
+    <ul>
+      <li><strong>Passo 6:</strong> Uncaught ReferenceError: naoExiste is not defined at aula8.js:2</li>
+      <li><strong>Passo 10:</strong> Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment &lt;&gt;...&lt;/&gt;?</li>
       <li><strong>Passo 14:</strong> Warning: Each child in a list should have a unique "key" prop.</li>
     </ul>
 
-    <h2>Projetos no CodeSandbox</h2>
-    <p>Links para os dois projetos que desenvolvi no CodeSandbox:</p>
-    <ul>
-      <li><a href="https://codesandbox.io/p/sandbox/v5qlp8" target="_blank">Tabuleiro do tutorial</a></li>
-      <li><a href="https://codesandbox.io/p/sandbox/xvhsfh" target="_blank">AgroFeira em componentes</a></li>
-    </ul>
+    <h2>O que eu aprendi</h2>
+    <p>Se eu tivesse que fazer um programa grande, com umas 200 linhas, eu ia preferir usar a Forma 1 (externa). Se eu usasse a forma em linha ou interna, eu teria que copiar e colar o código em todas as páginas do site, e se precisasse mudar algo ia ser muito chato. É tipo o CSS, é melhor ter um arquivo separado e só linkar no HTML. Fica muito mais fácil de organizar.</p>
 
-    <h2>Decisão de estilo (Atividade 6)</h2>
-    <p>Reler a minha decisão de estilo da Atividade 6 foi importante para perceber que ela não muda com a chegada do JavaScript. Os tokens e as camadas de CSS que eu defini continuam válidos. O que muda é apenas onde o estilo é aplicado: no site estático ele fica no repositório, e nos componentes do CodeSandbox eu reaproveitei as mesmas cores do tokens.css.</p>
+    <h2>Repetição no catálogo</h2>
+    <p>Olhando pro meu catalogo.html, o que mais se repete são os cartões dos produtos, que têm a imagem, o nome, o preço e o botão. No React, o componente que faz o papel do Square seria um &lt;Produto /&gt;. As props que ele ia receber seriam as coisas que mudam de um produto pro outro, tipo o nome do produto e o preço.</p>
+
+    <h2>Props e estado</h2>
+    <p>No componente Produto, o nome chega pelas props, porque vem lá do App. Já o texto do botão fica no useState, começando como "Adicionar" e mudando pra "No carrinho" quando clica. Se eu clico em um produto, o outro não muda, porque cada componente tem o seu próprio estado. É como se cada um tivesse a sua própria memória.</p>
+
+    <h2>A decisão de estilo</h2>
+    <p>A minha decisão de estilo da Atividade 6 não muda. Eu ainda prefiro usar o CSS puro que eu fiz, porque é mais simples de controlar. Fazer as regras do .produto no CodeSandbox foi bem de boa, não precisei de biblioteca nenhuma pra fazer os cartões.</p>
+
   </main>
 
   <footer>
-    <p>AgroFeira — projeto acadêmico</p>
+    <p>AgroFeira - projeto acadêmico</p>
   </footer>
 </body>
 </html>
